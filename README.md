@@ -48,7 +48,7 @@ Stufe 3: Snake, Tic-Tac-To und Memory können erst gespielt werden, wenn vorab e
 
 ## Vorgehen
 
-1. Da Sie im Team an der Aufgabe arbeiten, bestimmen Sie zunächst wer das Team leitet. Die Aufgabe der Teamleitung ist die Wahrung des Überblicks über den Fortschritt der Teilaufgaben. Bei ernsten Problemen kann die Teamleitung Hilfe beim Auftraggeber suchen. Selbstverständlich darf die Teamleitung auch aktiv  programmieren.
+1. Bestimmen Sie zunächst, wer das Team leiten soll. Die Teamleitung bewahrt den Überblick über den Fortschritt der Teilaufgaben. Bei ernsten Problemen kann die Teamleitung Hilfe beim Auftraggeber suchen. Selbstverständlich darf die Teamleitung auch aktiv programmieren.
 
 2. Überlegen Sie,
 
@@ -56,9 +56,17 @@ Stufe 3: Snake, Tic-Tac-To und Memory können erst gespielt werden, wenn vorab e
     - wie die Teilaufgaben getestet werden
     - wie lange diese Aufgaben etwa dauern
     - in welcher Reihenfolge welche Teammitglieder diese Aufgaben ausführen. Arbeiten Sie paarweise oder zu dritt, so dass sich Ihre Stärken ergänzen.
-    - Nutzen Sie zur Planung allenfalls GANTT-Diagramme. Das ist Ihr (vorläufiger) Arbeitsplan.
+    - Nutzen Sie zur Planung allenfalls das Github-Projekt oder GANTT-Diagramme. Das ist Ihr (vorläufiger) Arbeitsplan.
 
-3. Der Arbeitsfortschritt und eventuell aufgetretene Probleme werden am Ende jedes Halbtags für jedes Team dokumentiert.
+3. Zu Beginn jedes 4-Lektionen Blocks trifft sich das Team, um kurz (max. 15 Minuten) das Projekt zu besprechen. Jedes Teammitglied beantwortet für alle folgende Fragen:
+  - Was habe ich zuletzt erreicht?
+  - Was macht Probleme?
+  - Was mache ich heute?
+  
+  Teammitglieder unterstützen einander bei allfälligen Probleme **nach** dem Meeting.
+  
+3. Jedes Teammitglied notiert Arbeitsfortschritt und eventuell aufgetretene Probleme am Ende jedes Halbtags.
+
 4. Alle Lernenden tragen zum Projektfortschritt bei. Allfällige Probleme werden offen und höflich im Team geklärt.
 
 ## Anforderungen und Hinweise: Hangman
