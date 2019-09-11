@@ -45,6 +45,10 @@ Stufe 3: Snake, Tic-Tac-To und Memory können erst gespielt werden, wenn vorab e
 3. Der erstellte Code wird im nützlichen Umfang inline dokumentiert.
 4. Für aus dem Internet kopierte Codesnippets (nur kleinere Fragmente) geben Sie die Quellen im Code an.
 
+## Ansprechpartner
+
+* Christoph Thomann:  christoph.thomann@kaderschulen-wiss.ch
+* Sven Schirmer: schirmer@green-orca.com
 
 ## Vorgehen
 
