@@ -58,7 +58,7 @@ var checkChar = function() {
       console.log("Length: " + arrUsedLetters.length);
       for(var x = 0; x <= arrUsedLetters.length; x++) {
         if(arrUsedLetters[x] == char) {
-          
+
           document.getElementById('try').innerHTML = "Buchstabe bereits gecheckt!";
 
           check = false;
@@ -164,7 +164,17 @@ var checkChar = function() {
   }
 }
 
+//get Char on keyPressed
 
+
+
+
+/*window.addEventListener('keypress',
+function(event) {
+var x = event.which || event.keyCode;
+var buchst = String.fromCharCode(x);
+document.getElementById("charOut").innerHTML = buchst;
+})*/
 
 
 
