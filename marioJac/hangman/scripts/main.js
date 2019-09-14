@@ -43,7 +43,7 @@ var checkChar = function() {
 
 
   console.log(usedLetters);
-  console.log("Bitte");
+
 
   if(char.length > 1) {
     document.getElementById('try').innerHTML = "Nur 1 Buchstabe eingeben!";
@@ -54,11 +54,11 @@ var checkChar = function() {
       document.getElementById('try').innerHTML = "Nur Buchstaben eingeben!";
     }
     else {
-      console.log("Hiiilfe");
+
       console.log("Length: " + arrUsedLetters.length);
       for(var x = 0; x <= arrUsedLetters.length; x++) {
         if(arrUsedLetters[x] == char) {
-          console.log("Figg di");
+          
           document.getElementById('try').innerHTML = "Buchstabe bereits gecheckt!";
 
           check = false;
