@@ -1,0 +1,33 @@
+
+
+header {
+  background-color: #772b42;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+header .lead {
+  border-bottom: 1px solid white;
+}
+
+#getWord {
+  letter-spacing: 0.7rem;
+}
+
+.jumboContainer {
+  display: inline-block;
+}
+
+#word {
+  margin-left: 7rem;
+}
+
+#img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.btnBack {
+  background-color: white;
+  margin-top: 0.5rem;
+}
