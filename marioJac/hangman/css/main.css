@@ -31,3 +31,11 @@ header .lead {
   background-color: white;
   margin-top: 0.5rem;
 }
+
+.char {
+  margin: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: 1px solid black;
+  text-align: center;
+}
