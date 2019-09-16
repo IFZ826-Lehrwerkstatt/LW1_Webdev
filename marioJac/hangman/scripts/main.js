@@ -11,27 +11,33 @@ var arrUsedLetters = [];
 var arrUnderL = [];
 var wordToCompare;
 var check = true;
+var char;
 
-var chooseWord = function() {
-
+window.addEventListener('load', function() {
+  console.log("Bitch");
   //Wort wird aus Array geholt
   var words = ["ATTRIBUT"];
   var rand = Math.floor(Math.random()*words.length);
   word = words[rand];
+  console.log("word: " + word);
 
   //Die einzelnen Buchstabenm sowie die nötige Anzahl Underlines werden in je ein Array gepusht
   for(var x = 0; x < word.length; x++) {
     arrUnderL.push('_');
     arrChar.push(word[x]);
-
-
+    console.log("arrChar: " + arrChar);
+    console.log("arrUnderL: " + arrUnderL);
   }
 
-  //Wort wird mit Leerzeichen als Trennzeichen ausgegeben
   document.getElementById('getWord').innerHTML = arrUnderL.join(' ');
-}
+});
 
-window.onload = chooseWord;
+//Wort wird mit Leerzeichen als Trennzeichen ausgegeben
+
+
+
+
+
 
 //Funktion um die Buchstaben im Wort abzuchecken
 
@@ -42,7 +48,7 @@ var checkChar = function() {
   var char = document.getElementById('inputLetter').value.toUpperCase();
 
 
-  console.log(usedLetters);
+  console.log("usedLetters: " + usedLetters);
 
 
   if(char.length > 1) {
@@ -68,7 +74,7 @@ var checkChar = function() {
 
       if(check) {
         check = true;
-        console.log(char);
+        console.log("char: " + char);
         arrUsedLetters.push(char);
         document.getElementById('usedLetters').innerHTML = arrUsedLetters.join(' ');
 
@@ -96,11 +102,24 @@ var checkChar = function() {
 }
 
 
+window.onload = function(e) {
+  var myFunction = function() {
+    var elem = event.target;
+    console.log("elem: " + elem);
+    char = elem.innerHTML;
+    console.log("char: " + char);
+  }
+
+
+  var clickDivs = document.getElementsByClassName('char');
+  for(var x=0; x<clickDivs.length; x++) {
+    clickDivs[x].onclick = myFunction;
+  }
+}
 
 
 
-
-document.getElementById('check').onclick = checkChar;
+//document.getElementById('check').onclick = checkChar;
 
 //Funktion um die Buchstaben im Wort abzuchecken
 
@@ -112,7 +131,7 @@ var checkChar = function() {
   var char = document.getElementById('inputLetter').value.toUpperCase();
 
 
-  console.log(usedLetters);
+  console.log("usedLetters: " + usedLetters);
 
 
   if(char.length > 1) {
@@ -140,7 +159,7 @@ var checkChar = function() {
 
       if(check) {
         check = true;
-        console.log(char);
+        console.log("char: " + char);
         arrUsedLetters.push(char);
         document.getElementById('usedLetters').innerHTML = arrUsedLetters.join(' ');
 
@@ -183,4 +202,4 @@ document.getElementById("charOut").innerHTML = buchst;
 
 
 
-document.getElementById('check').onclick = checkChar;
+//document.getElementById('check').onclick = checkChar;
