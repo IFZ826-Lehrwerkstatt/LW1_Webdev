@@ -28,12 +28,13 @@ window.addEventListener('load', function() {
     console.log("arrChar: " + arrChar);
     console.log("arrUnderL: " + arrUnderL);
   }
+
+  document.getElementById('getWord').innerHTML = arrUnderL.join(' ');
 });
 
 //Wort wird mit Leerzeichen als Trennzeichen ausgegeben
-document.getElementById('getWord').innerHTML = arrUnderL.join(' ');
-console.log("1: " + arrUnderL.join(' '));
-console.log(document.getElementById('getWord').innerHTML);
+
+
 
 
 
