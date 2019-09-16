@@ -123,7 +123,7 @@ var checkChar = function() {
   else {
     if(!char.match(/[A-Za-z]/)) {
       document.getElementById('try').innerHTML = "Nur Buchstaben eingeben!";
-      
+
     }
     else {
 
