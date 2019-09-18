@@ -11,11 +11,9 @@
 </head>
 <body>
 
-
   <header class="container-fluid">
     <a class="btnBack btn btn-outline-secondary" href="../index.html">Zurück</a>
     <div class="container">
-
 
       <div class="row">
         <div class="col-sm-12 col">
@@ -26,22 +24,29 @@
         <div class="col-sm-12 col">
           <h1 class="">Dein Wort:</h1>
           <p id="getWord"></p>
-
         </div>
       </div>
     </div>
   </header>
 
-
-
-
+  <!--Buttons laden das Dictionary des jeweiligen Moduls-->
   <div class="container">
+    <div class="">
+      <button class="btnModul btn btn-outline-secondary" id="loadM101" href="#">Modul 101</button>
+      <button class="btnModul btn btn-outline-secondary" id="loadM104" href="#">Modul 104</button>
+      <button class="btnModul btn btn-outline-secondary" id="loadM105" href="#">Modul 105</button>
+      <button class="btnModul btn btn-outline-secondary" id="loadM133" href="#">Modul 133</button>
+      <button class="btnModul btn btn-outline-secondary" id="loadM152" href="#">Modul 152</button>
+      <button class="btnModul btn btn-outline-secondary" id="loadM226a" href="#">Modul 226a</button>
+      <button class="btnModul btn btn-outline-secondary" id="loadM307" href="#">Modul 307</button>
+      <button class="btnModul btn btn-outline-secondary" id="loadM403" href="#">Modul 403</button>
+
+    </div>
     <div class="row">
       <div class="col-sm">
         <h5>Verbleibende Versuche:</h5>
         <p id="versuche"></p>
-        <img id="img" src="img/0.jpg" alt="">
-      </div>
+       </div>
       <div class="col-sm">
 
         <div class="row">
@@ -146,18 +151,15 @@
       <div class="col-sm">
         <h5>Bereits gebrauchte Buchstaben:</h5>
         <p id="usedLetters"></p>
-
       </div>
     </div>
   </div>
-
-
-
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="scripts/main.js"></script>
+  <script src="scripts/mar.js"></script>
 
 </body>
 </html>

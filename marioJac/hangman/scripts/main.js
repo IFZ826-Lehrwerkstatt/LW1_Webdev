@@ -32,8 +32,6 @@ window.addEventListener('load', function() {
   document.getElementById('getWord').innerHTML = arrUnderL.join(' ');
 });
 
-//Wort wird mit Leerzeichen als Trennzeichen ausgegeben
-
 
 
 
