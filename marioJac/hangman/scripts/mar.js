@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
 
-=======
->>>>>>> ba6bb4cef5f13e4b4d2c923e17bba54461c4e58d
 var hangman_dictionary = {
 
     "M101": { "Datentyp": "eine Komponente der Variablendeklaration",
@@ -29,18 +26,11 @@ var hangman_dictionary = {
 
 $('.btnModul').on('click', function(){
   /*HIER DAS DICTIONARY LADEN*/
-<<<<<<< HEAD
   var modul = $(this).val();
   var keys = Object.keys(hangman_dictionary[modul]);
   var word2Guess = keys[Math.floor(Math.random() * keys.length)];
   var description = hangman_dictionary[modul][word2Guess];
   $('#hint').text(description);
-=======
-  var modul = $(this).text();
-  var keys = Object.keys(hangman_dictionary[modul]);
-  var word2Guess = hangman_dictionary[modul][Math.random() * keys.length];
-  var description = hangman_dictionary[modul][word2Guess];
->>>>>>> ba6bb4cef5f13e4b4d2c923e17bba54461c4e58d
 });
 
 

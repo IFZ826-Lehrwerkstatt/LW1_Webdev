@@ -8,7 +8,7 @@ var char;
 var counter = 0;
 var elem;
 
-<<<<<<< HEAD
+
 
 var hangman_dictionary = {
 
@@ -47,8 +47,7 @@ $('.btnModul').on('click', function(){
 
 
 
-=======
->>>>>>> ba6bb4cef5f13e4b4d2c923e17bba54461c4e58d
+
 //Funktion - Gibt das Wort mit Underlines aus
 
 
