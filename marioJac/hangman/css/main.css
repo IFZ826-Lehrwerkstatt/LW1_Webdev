@@ -37,20 +37,12 @@ header .lead {
   padding-top: 1rem;
   padding-bottom: 1rem;
   border: 1px solid black;
+  border-radius: 5%;
   text-align: center;
   background-color: #772b42;
 }
 
-#getWord {
-  display: inline-block;
-}
-
-#hint {
-  display: inline-block;
-  margin-left: 1rem;
-}
-
-.colSelect {
-  text-align: center;
-
+.disable {
+  background-color: grey;
+  color: white;
 }
