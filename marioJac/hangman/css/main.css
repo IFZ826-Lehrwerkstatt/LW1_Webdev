@@ -40,3 +40,17 @@ header .lead {
   text-align: center;
   background-color: #772b42;
 }
+
+#getWord {
+  display: inline-block;
+}
+
+#hint {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.colSelect {
+  text-align: center;
+
+}

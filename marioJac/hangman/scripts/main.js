@@ -14,19 +14,18 @@ var check = true;
 var char;
 
 window.addEventListener('load', function() {
-  console.log("Bitch");
+
   //Wort wird aus Array geholt
   var words = ["ATTRIBUT"];
   var rand = Math.floor(Math.random()*words.length);
   word = words[rand];
-  console.log("word: " + word);
+
 
   //Die einzelnen Buchstabenm sowie die nötige Anzahl Underlines werden in je ein Array gepusht
   for(var x = 0; x < word.length; x++) {
     arrUnderL.push('_');
     arrChar.push(word[x]);
-    console.log("arrChar: " + arrChar);
-    console.log("arrUnderL: " + arrUnderL);
+
   }
 
   document.getElementById('getWord').innerHTML = arrUnderL.join(' ');
@@ -46,7 +45,7 @@ var checkChar = function() {
   var char = document.getElementById('inputLetter').value.toUpperCase();
 
 
-  console.log("usedLetters: " + usedLetters);
+
 
 
   if(char.length > 1) {
@@ -59,7 +58,7 @@ var checkChar = function() {
     }
     else {
 
-      console.log("Length: " + arrUsedLetters.length);
+
       for(var x = 0; x <= arrUsedLetters.length; x++) {
         if(arrUsedLetters[x] == char) {
 
@@ -72,7 +71,7 @@ var checkChar = function() {
 
       if(check) {
         check = true;
-        console.log("char: " + char);
+
         arrUsedLetters.push(char);
         document.getElementById('usedLetters').innerHTML = arrUsedLetters.join(' ');
 
@@ -103,9 +102,9 @@ var checkChar = function() {
 window.onload = function(e) {
   var myFunction = function() {
     var elem = event.target;
-    console.log("elem: " + elem);
+
     char = elem.innerHTML;
-    console.log("char: " + char);
+
   }
 
 
