@@ -35,7 +35,7 @@ $('.btnModul').on('click', function(){
 
 
 
-word = "Attribut";
+/*word = "Attribut";
 for (var i=0; i < word.length; i++){
   console.log(word[i]);
 }
@@ -55,4 +55,4 @@ var word = "Attribut";
 if (findMe(word, "z")==0){
   console.log("z wurde nicht gefunden.")
 }
-findMe(word, "t");
+findMe(word, "t");*/
