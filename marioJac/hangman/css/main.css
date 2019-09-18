@@ -1,3 +1,7 @@
+* {
+  padding: 0;
+}
+
 header {
   background-color: #772b42;
   color: white;
@@ -8,12 +12,26 @@ header .lead {
   border-bottom: 1px solid white;
 }
 
-#getWord {
-  letter-spacing: 0.7rem;
+.container-fluid {
+  margin-bottom: 1rem;
+  padding: 0;
 }
 
-.jumboContainer {
+.container {
+  padding: 0;
+}
+
+select {
+  width: 30%;
+}
+
+h2, h4 {
+  margin-right: 1.5rem;
   display: inline-block;
+}
+
+#getWord {
+  letter-spacing: 0.7rem;
 }
 
 #word {
@@ -32,8 +50,8 @@ header .lead {
 
 .char {
   margin: 0.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   border: 1px solid black;
   border-radius: 5%;
   text-align: center;
@@ -46,6 +64,29 @@ header .lead {
   color: white;
 }
 
-.colSelect {
-  
+.unvisible {
+  background-color: white;
+  color: white;
+  border: none;
+}
+
+#getWord {
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0;
+}
+#hint {
+  display: inline-block;
+  margin: 0;
+}
+
+
+
+@media screen and (max-width: 770px) {
+  .char {
+    margin: 0.1rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
 }
