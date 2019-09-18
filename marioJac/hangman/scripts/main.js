@@ -8,9 +8,6 @@ var char;
 var counter = 0;
 var elem;
 
-
-
-
 //Funktion - Gibt das Wort mit Underlines aus
 window.addEventListener('load', function() {
 
@@ -19,7 +16,7 @@ window.addEventListener('load', function() {
   var rand = Math.floor(Math.random()*words.length);
   word = words[rand];
 
-  //Die einzelnen Buchstabenm sowie die nötige Anzahl Underlines werden in je ein Array gepusht
+  //Die einzelnen Buchstaben sowie die nötige Anzahl Underlines werden in je ein Array gepusht
   for(var x = 0; x < word.length; x++) {
     arrUnderL.push('_');
     arrChar.push(word[x]);
@@ -92,11 +89,6 @@ var checkChar = function() {
   elem.classList.add('disable');
 }
 
-
-
-
-
-
 //document.getElementById('check').onclick = checkChar;
 
 //Funktion um die Buchstaben im Wort abzuchecken
@@ -105,16 +97,12 @@ var checkChar = function() {
 //get Char on keyPressed
 
 
-
-
 /*window.addEventListener('keypress',
 function(event) {
 var x = event.which || event.keyCode;
 var buchst = String.fromCharCode(x);
 document.getElementById("charOut").innerHTML = buchst;
 })*/
-
-
 
 
 //document.getElementById('check').onclick = checkChar;
