@@ -11,8 +11,8 @@
 </head>
 <body>
 
-  <header class="container-fluid">
-    <a class="btnBack btn btn-outline-secondary" href="#">Zurück</a>
+  <header id="hangman" class="container-fluid">
+    <a class="btnBack btn btn-outline-secondary" href="start.html">Zurück</a>
     <div class="container">
 
       <div class="row">
@@ -24,14 +24,14 @@
         <div class="col-6">
           <h4 class="">Wähle ein Modul um ein Wort zu generieren:</h4>
           <select class="btnBack btn btn-outline-secondary">
-            <option class="btnModul btn btn-outline-secondary" id="loadM101" value="M101" selected>Modul 101</option>
-            <option class="btnModul btn btn-outline-secondary" id="loadM104" value="M104">Modul 104</option>
-            <option class="btnModul btn btn-outline-secondary" id="loadM105" value="M105">Modul 105</option>
-            <option class="btnModul btn btn-outline-secondary" id="loadM133" value="M133">Modul 133</option>
-            <option class="btnModul btn btn-outline-secondary" id="loadM152" value="M152">Modul 152</option>
-            <option class="btnModul btn btn-outline-secondary" id="loadM226A" value="M226A">Modul 226a</option>
-            <option class="btnModul btn btn-outline-secondary" id="loadM307" value="M307">Modul 307</option>
-            <option class="btnModul btn btn-outline-secondary" id="loadM403" value="M403">Modul 403</option>
+            <option class="sel btnModul btn btn-outline-secondary" id="loadM101" value="M101">Modul 101</option>
+            <option class="sel btnModul btn btn-outline-secondary" id="loadM104" value="M104">Modul 104</option>
+            <option class="sel btnModul btn btn-outline-secondary" id="loadM105" value="M105">Modul 105</option>
+            <option class="sel btnModul btn btn-outline-secondary" id="loadM133" value="M133">Modul 133</option>
+            <option class="sel btnModul btn btn-outline-secondary" id="loadM152" value="M152">Modul 152</option>
+            <option class="sel btnModul btn btn-outline-secondary" id="loadM226A" value="M226A">Modul 226a</option>
+            <option class="sel btnModul btn btn-outline-secondary" id="loadM307" value="M307">Modul 307</option>
+            <option class="sel btnModul btn btn-outline-secondary" id="loadM403" value="M403">Modul 403</option>
           </select>
         </div>
       </div>
@@ -61,6 +61,7 @@
     <div class="row">
       <div class="col-sm-12 col-md-5">
         <h5>Verbleibende Versuche:</h5>
+        <img id="img" src="img/0.png" alt="">
         <p id="versuche"></p>
       </div>
 

@@ -33,10 +33,13 @@ var hangman_dictionary = {
   }
 };
 
+
+
 $('.btnModul').on('click', function(){
   document.getElementById('versuche').innerHTML = counter;
   document.getElementById('getWord').innerHTML = "";
   $('.char').removeClass('disable');
+
   counter = 7;
   arrUnderL = [];
   arrChar = [];
@@ -44,15 +47,11 @@ $('.btnModul').on('click', function(){
 
   /*Dictionary wird geladen*/
   var modul = $(this).val();
-  console.log("modul: " + modul);
   var keys = Object.keys(hangman_dictionary[modul]);
   word = keys[Math.floor(Math.random() * keys.length)]
   wordUpper = word.toUpperCase();
   var description = hangman_dictionary[modul][word];
-  console.log("description: " + description);
   $('#hint').text(description);
-  console.log("Word: " + word);
-
   chooseWord();
 });
 
@@ -74,8 +73,8 @@ function chooseWord() {
 
 //Funktion - Klick auf Buchstabe holt Buchstabe in Variable
 window.onload = function(e) {
-
-  var myFunction = function() {
+  document.getElementById('img').src = "img/7.jpg";
+    var myFunction = function() {
     elem = event.target;
     char = elem.innerHTML;
     //wieso auch immer, in "char" hat es ewig viele Leerzeichen. Damit werden sie entfernt
@@ -92,13 +91,15 @@ window.onload = function(e) {
 
 var checkChar = function() {
 
+
+
   var check = false;
 
   if($(elem).hasClass('disable')) {
   }
 
   else {
-    console.log("arrChar.length: " + arrChar.length);
+
     for(var x = 0; x < arrChar.length; x++) {
       if(arrChar[x] == char) {
         arrUnderL[x] = char;
@@ -106,7 +107,11 @@ var checkChar = function() {
       }
       if(!arrUnderL.includes("_")) {
         winsInARow++;
-        console.log("Du hast gewonnen!");
+        if(window.location.href == "http://localhost/LW1_Webdev/hangman/") {
+
+          window.location.assign("http://localhost/LW1_Webdev//hangman/start.html");
+        }
+
         document.getElementById('versuche').innerHTML = "<span>Du hast " + winsInARow + " Mal in Folge gewonnen!</span> <br> Gewinne so viele Spiele wie möglich nacheinander und wähle ein neues Modul..";
         $('.char').addClass('disable');
 
@@ -115,6 +120,7 @@ var checkChar = function() {
     }
     if(!check) {
       counter--;
+      document.getElementById('img').src = "img/" + counter + ".png";
       document.getElementById('versuche').innerHTML = counter;
       if(counter == 0) {
         document.getElementById('versuche').innerHTML = "<span>Du bist tot!</span> <br> Wenn du weiterspielen möchtest, erneut ein Modul wählen.";
@@ -122,8 +128,7 @@ var checkChar = function() {
       }
     }
 
-    console.log("arrChar: " + arrChar);
-    console.log("char: " + char);
+
     document.getElementById('getWord').innerHTML = arrUnderL.join(' ');
 
     elem.classList.add('disable');

@@ -2,14 +2,48 @@
   padding: 0;
 }
 
+
+span {
+  font-size: 0.75rem;
+}
+
+
+
 header {
-  background-color: #772b42;
+  height: 148.75px;
   color: white;
   margin-bottom: 3rem;
 }
 
 header .lead {
   border-bottom: 1px solid white;
+}
+
+#auswahl .row {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#auswahl a {
+  width: 40%;
+}
+
+#hangman {
+  background-color: #772b42;
+}
+
+#start {
+  background-color: #604E80;
+  height: 148.75px;
+  position: relative;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .container-fluid {
