@@ -11,51 +11,61 @@
 </head>
 <body>
 
-  <header class="container-fluid">
-    <a class="btnBack btn btn-outline-secondary" href="../index.html">Zurück</a>
+  <header id="hangman" class="container-fluid">
+    <a class="btnBack btn btn-outline-secondary" href="start.html">Zurück</a>
     <div class="container">
 
       <div class="row">
-        <div class="col-sm-12 col">
-          <h1 class="display-4">Hangman</h1>
+        <div class="col-6">
+          <h1 class="">Hangman</h1>
           <p class="lead">Errate das Wort mit 7 Versuchen</p>
-        </div>
 
-        <div class="col-sm-12 col">
-          <h1 class="">Dein Wort:</h1>
-          <p id="getWord"></p>
-          <p id="hint"></p>
+        </div>
+        <div class="col-6">
+          <h4 class="">Wähle ein Modul um ein Wort zu generieren:</h4>
+          <select class="btnBack btn btn-outline-secondary">
+            <option class="sel btnModul btn btn-outline-secondary" id="loadM101" value="M101">Modul 101</option>
+            <option class="sel btnModul btn btn-outline-secondary" id="loadM104" value="M104">Modul 104</option>
+            <option class="sel btnModul btn btn-outline-secondary" id="loadM105" value="M105">Modul 105</option>
+            <option class="sel btnModul btn btn-outline-secondary" id="loadM133" value="M133">Modul 133</option>
+            <option class="sel btnModul btn btn-outline-secondary" id="loadM152" value="M152">Modul 152</option>
+            <option class="sel btnModul btn btn-outline-secondary" id="loadM226A" value="M226A">Modul 226a</option>
+            <option class="sel btnModul btn btn-outline-secondary" id="loadM307" value="M307">Modul 307</option>
+            <option class="sel btnModul btn btn-outline-secondary" id="loadM403" value="M403">Modul 403</option>
+          </select>
         </div>
       </div>
     </div>
   </header>
 
 
+
+
+
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12 colSelect">
-      <select class="btnModul btn btn-outline-secondary">
-        <option class="btnModul btn btn-outline-secondary" id="loadM101" value="M101">Modul 101</option>
-        <option class="btnModul btn btn-outline-secondary" id="loadM104" value="M104">Modul 104</option>
-        <option class="btnModul btn btn-outline-secondary" id="loadM105" value="M105">Modul 105</option>
-        <option class="btnModul btn btn-outline-secondary" id="loadM133" value="M133">Modul 133</option>
-        <option class="btnModul btn btn-outline-secondary" id="loadM152" value="M152">Modul 152</option>
-        <option class="btnModul btn btn-outline-secondary" id="loadM226A" value="M226A">Modul 226a</option>
-        <option class="btnModul btn btn-outline-secondary" id="loadM307" value="M307">Modul 307</option>
-        <option class="btnModul btn btn-outline-secondary" id="loadM403" value="M403">Modul 403</option>
-      </select>
-      </div>
+    <div class="container-fluid">
+      <h2>Dein Wort:</h2>
+      <p id="getWord"></p>
     </div>
+    <div class="container-fluid">
+      <h4>Hinweis:</h4>
+      <p id="hint"></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="container-fluid">
+
+
+
     <div class="row">
-      <div class="col-sm">
+      <div class="col-sm-12 col-md-5">
         <h5>Verbleibende Versuche:</h5>
+        <img id="img" src="img/0.png" alt="">
         <p id="versuche"></p>
-
-       </div>
-
       </div>
 
-      <div class="col-sm">
+      <div class="col-sm-12 col-md-7 centered">
         <div class="row">
           <div class="col char">
             A
@@ -147,23 +157,34 @@
         </div>
 
         <div class="row">
-          <div class="col-2 char">
+          <div class="col char">
             Z
           </div>
+          <div class="col char unvisible disable">
 
+          </div>
+          <div class="col char unvisible disable">
+
+          </div>
+          <div class="col char unvisible disable">
+
+          </div>
+          <div class="col char unvisible disable">
+
+          </div>
+        </div>
         </div>
 
-
       </div>
-
     </div>
   </div>
+</div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="scripts/main.js"></script>
-  <script src="scripts/mar.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="scripts/main.js"></script>
+
 
 </body>
 </html>

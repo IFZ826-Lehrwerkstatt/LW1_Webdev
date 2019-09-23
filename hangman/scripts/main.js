@@ -2,12 +2,11 @@ var word;
 var arrChar = [];
 var arrUsedLetters = [];
 var arrUnderL = [];
-var wordToCompare;
 var check = true;
 var char;
-var counter = 0;
+var counter = 7;
 var elem;
-
+var winsInARow = 0;
 
 
 var hangman_dictionary = {
@@ -84,14 +83,26 @@ var hangman_dictionary = {
       "Rückgabetyp": "Bestandteil Funktionskopf"}
 };
 
+
+
 $('.btnModul').on('click', function(){
-  /*HIER DAS DICTIONARY LADEN*/
+  document.getElementById('versuche').innerHTML = counter;
+  document.getElementById('getWord').innerHTML = "";
+  $('.char').removeClass('disable');
+
+  counter = 7;
+  arrUnderL = [];
+  arrChar = [];
+
+
+  /*Dictionary wird geladen*/
   var modul = $(this).val();
   var keys = Object.keys(hangman_dictionary[modul]);
-  word = keys[Math.floor(Math.random() * keys.length)];
+  word = keys[Math.floor(Math.random() * keys.length)]
+  wordUpper = word.toUpperCase();
   var description = hangman_dictionary[modul][word];
   $('#hint').text(description);
-  console.log("Word: " + word);
+  chooseWord();
 });
 
 
@@ -99,25 +110,21 @@ $('.btnModul').on('click', function(){
 
 
 //Funktion - Gibt das Wort mit Underlines aus
-
-
-window.addEventListener('load', function() {
-
-  //Wort wird aus Array geholt
-
-
-  //Die einzelnen Buchstaben sowie die nötige Anzahl Underlines werden in je ein Array gepusht
+function chooseWord() {
   for(var x = 0; x < word.length; x++) {
     arrUnderL.push('_');
-    arrChar.push(word[x]);
+    arrChar.push(wordUpper[x]);
   }
   //Wort wird mit Leerzeichen als Trennzeichen ausgegeben
   document.getElementById('getWord').innerHTML = arrUnderL.join(' ');
-});
+}
+
+
 
 //Funktion - Klick auf Buchstabe holt Buchstabe in Variable
 window.onload = function(e) {
-  var myFunction = function() {
+  document.getElementById('img').src = "img/7.jpg";
+    var myFunction = function() {
     elem = event.target;
     char = elem.innerHTML;
     //wieso auch immer, in "char" hat es ewig viele Leerzeichen. Damit werden sie entfernt
@@ -133,43 +140,47 @@ window.onload = function(e) {
 //Funktion - um die Buchstaben im Wort abzuchecken
 
 var checkChar = function() {
-  check = true;
 
+
+
+  var check = false;
 
   if($(elem).hasClass('disable')) {
   }
 
   else {
 
-        if(check) {
+    for(var x = 0; x < arrChar.length; x++) {
+      if(arrChar[x] == char) {
+        arrUnderL[x] = char;
+        check = true;
+      }
+      if(!arrUnderL.includes("_")) {
+        winsInARow++;
+        if(window.location.href == "http://localhost/LW1_Webdev/hangman/") {
 
-          console.log("arrChar.length: " + arrChar.length);
-          for(var x = 0; x < arrChar.length; x++) {
-            if(arrChar[x] == char) {
-              arrUnderL[x] = char;
-            }
-          }
-          document.getElementById('getWord').innerHTML = arrUnderL.join(' ');
+          window.location.assign("http://localhost/LW1_Webdev//hangman/start.html");
         }
 
+        document.getElementById('versuche').innerHTML = "<span>Du hast " + winsInARow + " Mal in Folge gewonnen!</span> <br> Gewinne so viele Spiele wie möglich nacheinander und wähle ein neues Modul..";
+        $('.char').addClass('disable');
+
+      }
+
+    }
+    if(!check) {
+      counter--;
+      document.getElementById('img').src = "img/" + counter + ".png";
+      document.getElementById('versuche').innerHTML = counter;
+      if(counter == 0) {
+        document.getElementById('versuche').innerHTML = "<span>Du bist tot!</span> <br> Wenn du weiterspielen möchtest, erneut ein Modul wählen.";
+        $('.char').addClass('disable');
+      }
+    }
+
+
+    document.getElementById('getWord').innerHTML = arrUnderL.join(' ');
+
+    elem.classList.add('disable');
   }
-  elem.classList.add('disable');
 }
-
-//document.getElementById('check').onclick = checkChar;
-
-//Funktion um die Buchstaben im Wort abzuchecken
-
-
-//get Char on keyPressed
-
-
-/*window.addEventListener('keypress',
-function(event) {
-var x = event.which || event.keyCode;
-var buchst = String.fromCharCode(x);
-document.getElementById("charOut").innerHTML = buchst;
-})*/
-
-
-//document.getElementById('check').onclick = checkChar;

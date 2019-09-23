@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+}
+
+
+span {
+  font-size: 0.75rem;
+}
+
+
+
+header {
+  height: 148.75px;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+header .lead {
+  border-bottom: 1px solid white;
+}
+
+#auswahl .row {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#auswahl a {
+  width: 40%;
+}
+
+#hangman {
+  background-color: #772b42;
+}
+
+#start {
+  background-color: #604E80;
+  height: 148.75px;
+  position: relative;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.container-fluid {
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+.container {
+  padding: 0;
+}
+
+select {
+  width: 30%;
+}
+
+h2, h4 {
+  margin-right: 1.5rem;
+  display: inline-block;
+}
+
+#getWord {
+  letter-spacing: 0.7rem;
+}
+
+#word {
+  margin-left: 7rem;
+}
+
+#img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.btnBack {
+  background-color: white;
+  margin-top: 0.5rem;
+}
+
+.char {
+  margin: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: 1px solid black;
+  border-radius: 5%;
+  text-align: center;
+  background-color: #772b42;
+  color: white;
+}
+
+.disable {
+  background-color: grey;
+  color: white;
+}
+
+.unvisible {
+  background-color: white;
+  color: white;
+  border: none;
+}
+
+#getWord {
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0;
+}
+#hint {
+  display: inline-block;
+  margin: 0;
+}
+
+
+
+@media screen and (max-width: 770px) {
+  .char {
+    margin: 0.1rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+}
