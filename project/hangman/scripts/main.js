@@ -155,7 +155,7 @@ var checkChar = function() {
       }
       if(!arrUnderL.includes("_")) {
         winsInARow++;
-        if(window.location.href == "http://localhost/LW1_Webdev/project/") {
+        if(window.location.href == "http://localhost/LW1_Webdev/project/hangman/") {
 
           window.location.assign("http://localhost/LW1_Webdev//project/start.html");
         }
