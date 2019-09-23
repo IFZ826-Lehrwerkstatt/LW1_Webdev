@@ -1,14 +1,5 @@
-var word;
-var arrChar = [];
-var arrUsedLetters = [];
-var arrUnderL = [];
-var check = true;
-var char;
-var counter = 7;
-var elem;
-var winsInARow = 0;
 
-
+//Dictionary
 var hangman_dictionary = {
     "M101": {
       "Datentyp": "eine Komponente der Variablendeklaration",
@@ -85,6 +76,22 @@ var hangman_dictionary = {
       "Rückgabetyp": "Bestandteil Funktionskopf"}
 };
 
+var word;
+var arrChar = [];
+var arrUsedLetters = [];
+var arrUnderL = [];
+var check = true;
+var char;
+var counter = 7;
+var elem;
+var winsInARow = 0;
+
+
+$('.btnModul').each(function() {
+  if($(this).is(':selected')) {
+    $('.char').addClass('disable');
+  }
+})
 
 
 $('.btnModul').on('click', function(){
@@ -97,7 +104,6 @@ $('.btnModul').on('click', function(){
   arrUnderL = [];
   arrChar = [];
 
-
   /*Dictionary wird geladen*/
   var modul = $(this).val();
   var keys = Object.keys(hangman_dictionary[modul]);
@@ -108,10 +114,6 @@ $('.btnModul').on('click', function(){
   chooseWord();
 });
 
-
-
-
-
 //Funktion - Gibt das Wort mit Underlines aus
 function chooseWord() {
   for(var x = 0; x < word.length; x++) {
@@ -121,8 +123,6 @@ function chooseWord() {
   //Wort wird mit Leerzeichen als Trennzeichen ausgegeben
   document.getElementById('getWord').innerHTML = arrUnderL.join(' ');
 }
-
-
 
 //Funktion - Klick auf Buchstabe holt Buchstabe in Variable
 window.onload = function(e) {
@@ -141,18 +141,13 @@ window.onload = function(e) {
 }
 
 //Funktion - um die Buchstaben im Wort abzuchecken
-
 var checkChar = function() {
-
-
-
   var check = false;
 
   if($(elem).hasClass('disable')) {
   }
 
   else {
-
     for(var x = 0; x < arrChar.length; x++) {
       if(arrChar[x] == char) {
         arrUnderL[x] = char;
