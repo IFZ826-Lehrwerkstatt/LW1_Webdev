@@ -8,12 +8,18 @@
     <script type="text/javascript" src="js/titleanimation.js"></script>
   </head>
   <body onload="titleMarquee()">
+
+    <iframe src="music/silence.mp3" allow="autoplay" id="silence" style="display:none;"></iframe>
+    <audio autoplay loop>
+      <source src="music/music.mp3" type="audio/mp3" type="video/">
+    </audio>
+
     <main id="tictactoe">
      <header>
-       <h1>-O- Tic Tac Toe -X-</h1>
+       <h1>~O~ Tic Tac Toe ~X~</h1>
        <p class="restart"><a href="/">Restart</a></p>
-       <button class="btnmulti" type="button" name="button">Multiplayer</button>
-       <button class="btnsingle" type="button" name="button">Singleplayer</button>
+       <!--<button class="btnmulti" type="button" name="button">Multiplayer</button>
+       <button class="btnsingle" type="button" name="button">Singleplayer</button>-->
      </header>
      <section>
        <table>
