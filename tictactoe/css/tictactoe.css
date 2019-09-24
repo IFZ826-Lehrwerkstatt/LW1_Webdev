@@ -1,0 +1,76 @@
+body {
+  background-color: black;
+}
+
+h1{
+  text-align:center;
+  vertical-align: middle;
+  color: white;
+	font-family:  "Arial", sans-serif;
+}
+
+a{
+  color:#000;
+  text-decoration:none;
+  color: white;
+}
+
+.player1{
+  color:#ff57e6;
+}
+
+.player2{
+  color:#70c8ff;
+}
+
+.message{
+  background-color:#57ffab;
+  height:50px;
+  color:#fff;
+  display:none;
+  text-align: center;
+}
+
+.restart{
+  width:240px;
+  text-align:center;
+  margin:0 auto;
+  color: white;
+  font-family:  "Arial", sans-serif;
+}
+
+td {
+	border:  2px solid white;
+	height:  200px;
+	width:  200px;
+	text-align:  center;
+	vertical-align:  middle;
+	font-family:  "Arial", sans-serif;
+	font-size:  130px;
+	cursor: pointer;
+}
+
+table {
+	border-collapse: collapse;
+	position: absolute;
+  align-items: center;
+	left: 50%;
+	margin-left: -300px;
+	top: 200px;
+}
+
+table tr:first-child td {
+	border-top: 0;
+}
+
+table tr:last-child td {
+	border-bottom: 0;
+}
+
+table tr td:first-child {
+	border-left: 0;
+}
+
+table tr td:last-child {
+	border-right: 0;
+}
