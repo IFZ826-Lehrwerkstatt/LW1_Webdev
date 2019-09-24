@@ -1,6 +1,5 @@
 var TicTacToe =
 {
-
     counter: 1,
 
     init: function(e,obj)

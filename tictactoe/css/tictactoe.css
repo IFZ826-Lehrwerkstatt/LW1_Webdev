@@ -24,11 +24,13 @@ a{
 }
 
 .message{
-  background-color:#57ffab;
+  background-color:#00ba89;
   height:50px;
   color:#fff;
   display:none;
   text-align: center;
+  font-size: 45px;
+  font-family: "Arial", sans-serif;
 }
 
 .restart{
