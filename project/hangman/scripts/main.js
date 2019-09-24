@@ -96,7 +96,7 @@ $('.btnModul').each(function() {
 
 $('.btnModul').on('click', function(){
   document.getElementById('img').src = "img/7.jpg";
-  document.getElementById('versuche').innerHTML = counter;
+
   document.getElementById('getWord').innerHTML = "";
   $('.char').removeClass('disable');
 
@@ -126,7 +126,6 @@ function chooseWord() {
 
 //Funktion - Klick auf Buchstabe holt Buchstabe in Variable
 window.onload = function(e) {
-  document.getElementById('img').src = "img/7.jpg";
     var myFunction = function() {
     elem = event.target;
     char = elem.innerHTML;
@@ -156,7 +155,6 @@ var checkChar = function() {
       if(!arrUnderL.includes("_")) {
         winsInARow++;
         if(window.location.href == "http://localhost/LW1_Webdev/project/hangman/") {
-
           window.location.assign("http://localhost/LW1_Webdev//project/start.html");
         }
         document.getElementById('img').src = "img/win.png";
@@ -168,10 +166,10 @@ var checkChar = function() {
     }
     if(!check) {
       counter--;
-      document.getElementById('img').src = "img/" + counter + ".png";
-      document.getElementById('versuche').innerHTML = counter;
+      document.getElementById('img').src = "img/" + counter + ".jpg";
+
       if(counter == 0) {
-        document.getElementById('versuche').innerHTML = "<span>Du bist tot!</span> <br> Wenn du weiterspielen möchtest, erneut ein Modul wählen.";
+        document.getElementById('versuche').innerHTML = "<span>Du bist tot!</span> <br> Wenn du weiterspielen möchtest,<br> <span>erneut ein Modul wählen.</span>";
         winsInARow = 0;
         $('.char').addClass('disable');
       }
