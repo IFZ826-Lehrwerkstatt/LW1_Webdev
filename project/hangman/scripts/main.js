@@ -158,7 +158,7 @@ var checkChar = function() {
           window.location.assign("http://localhost/LW1_Webdev//project/start.html");
         }
         document.getElementById('img').src = "img/win.png";
-        document.getElementById('versuche').innerHTML = "<span>Du hast " + winsInARow + " Mal in Folge gewonnen!</span> <br> Gewinne so viele Spiele wie möglich nacheinander und wähle ein neues Modul..";
+        document.getElementById('versuche').innerHTML = "<span>Du hast " + winsInARow + " Mal in Folge gewonnen!</span> <br> Gewinne so viele Spiele wie möglich nacheinander und <span>wähle ein neues Modul.</span>";
         $('.char').addClass('disable');
 
       }
