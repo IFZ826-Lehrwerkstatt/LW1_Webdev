@@ -3,17 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>Tic -X- Tac -O- Toe</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/tictactoe.css">
+    <!-- End of Stylesheets-->
+
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="js/titleanimation.js"></script>
+    <!-- End of Scripts -->
+
   </head>
+
   <body onload="titleMarquee()">
+
+    <div class="bg-image"></div>
+
+    <iframe src="music/silence.mp3" allow="autoplay" id="silence" style="display:none;"></iframe>
+    <audio autoplay loop>
+      <source src="music/music.mp3" type="audio/mp3" type="video/">
+    </audio>
+
     <main id="tictactoe">
      <header>
-       <h1>-O- Tic Tac Toe -X-</h1>
+       <h1>~O~ Tic Tac Toe ~X~</h1>
        <p class="restart"><a href="/">Restart</a></p>
-       <button class="btnmulti" type="button" name="button">Multiplayer</button>
-       <button class="btnsingle" type="button" name="button">Singleplayer</button>
+       <!--<button class="btnmulti" type="button" name="button">Multiplayer</button>
+       <button class="btnsingle" type="button" name="button">Singleplayer</button>-->
      </header>
      <section>
        <table>
@@ -37,6 +53,7 @@
        <span>
          <div class="message" colspan="3">Winner</div>
        </span>
+
 
      </section>
    </main>

@@ -1,5 +1,9 @@
 body {
   background-color: black;
+  background-image: url("../img/background2.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 h1{
@@ -7,6 +11,11 @@ h1{
   vertical-align: middle;
   color: white;
 	font-family:  "Arial", sans-serif;
+  text-decoration: underline;
+  font-size: 100px;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
 }
 
 a{
@@ -16,21 +25,29 @@ a{
 }
 
 .player1{
-  color:#ff57e6;
+  color:#ff4da6;
+  -webkit-animation: glowX 1s ease-in-out infinite alternate;
+  -moz-animation: glowX 1s ease-in-out infinite alternate;
+  animation: glowX 1s ease-in-out infinite alternate;
 }
 
 .player2{
   color:#70c8ff;
+  -webkit-animation: glowO 1s ease-in-out infinite alternate;
+  -moz-animation: glowO 1s ease-in-out infinite alternate;
+  animation: glowO 1s ease-in-out infinite alternate;
 }
 
 .message{
+  margin-top: 30px;
   background-color:#00ba89;
   height:50px;
   color:#fff;
   display:none;
   text-align: center;
-  font-size: 45px;
-  font-family: "Arial", sans-serif;
+  font-size: 40px;
+  font-family: "Impact", sans-serif;
+
 }
 
 .restart{
@@ -38,18 +55,27 @@ a{
   text-align:center;
   margin:0 auto;
   color: white;
-  font-family:  "Arial", sans-serif;
+  font-family:  "Impact", sans-serif;
+  font-size: 40px;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.restart:hover{
+  text-decoration: underline;
 }
 
 td {
-	border:  2px solid white;
-	height:  200px;
-	width:  200px;
+	border:  10px solid white;
+	height:  250px;
+	width:  250px;
 	text-align:  center;
 	vertical-align:  middle;
 	font-family:  "Arial", sans-serif;
 	font-size:  130px;
 	cursor: pointer;
+
 }
 
 table {
@@ -57,8 +83,8 @@ table {
 	position: absolute;
   align-items: center;
 	left: 50%;
-	margin-left: -300px;
-	top: 200px;
+	margin-left: -385px;
+	top: 400px;
 }
 
 table tr:first-child td {
@@ -75,4 +101,52 @@ table tr td:first-child {
 
 table tr td:last-child {
 	border-right: 0;
+}
+
+@-webkit-keyframes glowO
+{
+  from
+  {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to
+  {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+@-webkit-keyframes glowX
+{
+  from
+  {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #02aabf, 0 0 40px #02aabf, 0 0 50px #02aabf, 0 0 60px #02aabf, 0 0 70px #02aabf;
+  }
+  to
+  {
+    text-shadow: 0 0 20px #fff, 0 0 30px #49e8fc, 0 0 40px #49e8fc, 0 0 50px #49e8fc, 0 0 60px #49e8fc, 0 0 70px #49e8fc, 0 0 80px #49e8fc;
+  }
+}
+
+@-webkit-keyframes glow
+{
+  from
+  {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #b00017, 0 0 40px #b00017, 0 0 50px #b00017, 0 0 60px #b00017, 0 0 70px #b00017;
+  }
+  to
+  {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff3d57, 0 0 40px #ff3d57, 0 0 50px #ff3d57, 0 0 60px #ff3d57, 0 0 70px #ff3d57, 0 0 80px #ff3d57;
+  }
+}
+
+@-webkit-keyframes glowGrid
+{
+  from
+  {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #b00017, 0 0 40px #b00017, 0 0 50px #b00017, 0 0 60px #b00017, 0 0 70px #b00017;
+  }
+  to
+  {
+    box-shadow: 0 0 20px #fff, 0 0 30px #ff3d57, 0 0 40px #ff3d57, 0 0 50px #ff3d57, 0 0 60px #ff3d57, 0 0 70px #ff3d57, 0 0 80px #ff3d57;
+  }
 }
