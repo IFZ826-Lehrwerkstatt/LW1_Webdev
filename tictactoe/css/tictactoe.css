@@ -1,6 +1,9 @@
 body {
   background-color: black;
-  background-image: url("img/background.jpg");
+  background-image: url("../img/background2.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 h1{
@@ -36,13 +39,14 @@ a{
 }
 
 .message{
+  margin-top: 30px;
   background-color:#00ba89;
   height:50px;
   color:#fff;
   display:none;
   text-align: center;
-  font-size: 45px;
-  font-family: "Arial", sans-serif;
+  font-size: 40px;
+  font-family: "Impact", sans-serif;
 
 }
 
@@ -53,12 +57,19 @@ a{
   color: white;
   font-family:  "Impact", sans-serif;
   font-size: 40px;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.restart:hover{
+  text-decoration: underline;
 }
 
 td {
-	border:  2px solid white;
-	height:  200px;
-	width:  200px;
+	border:  10px solid white;
+	height:  250px;
+	width:  250px;
 	text-align:  center;
 	vertical-align:  middle;
 	font-family:  "Arial", sans-serif;
@@ -72,9 +83,8 @@ table {
 	position: absolute;
   align-items: center;
 	left: 50%;
-	margin-left: -305px;
+	margin-left: -385px;
 	top: 400px;
-
 }
 
 table tr:first-child td {
@@ -126,5 +136,17 @@ table tr td:last-child {
   to
   {
     text-shadow: 0 0 20px #fff, 0 0 30px #ff3d57, 0 0 40px #ff3d57, 0 0 50px #ff3d57, 0 0 60px #ff3d57, 0 0 70px #ff3d57, 0 0 80px #ff3d57;
+  }
+}
+
+@-webkit-keyframes glowGrid
+{
+  from
+  {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #b00017, 0 0 40px #b00017, 0 0 50px #b00017, 0 0 60px #b00017, 0 0 70px #b00017;
+  }
+  to
+  {
+    box-shadow: 0 0 20px #fff, 0 0 30px #ff3d57, 0 0 40px #ff3d57, 0 0 50px #ff3d57, 0 0 60px #ff3d57, 0 0 70px #ff3d57, 0 0 80px #ff3d57;
   }
 }
