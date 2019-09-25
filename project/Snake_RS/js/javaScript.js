@@ -30,23 +30,11 @@ window.addEventListener("load", function() {
 
   var mov = 0;
 
-  var moveSoundLeft = new Audio();
-  moveSoundLeft.src = "audio/move.mp3";
-
-  var moveSoundRight = new Audio();
-  moveSoundRight.src = "audio/move.mp3";
-
-  var moveSoundUp = new Audio();
-  moveSoundUp.src = "audio/move.mp3";
-
-  var moveSoundDown = new Audio();
-  moveSoundDown.src = "audio/move.mp3";
-
-
   var eatSound = new Audio();
-  eatSound.src = "audio/bite.mp3";
+  eatSound.src = "audio/bite.wav";
+
   var deathSound = new Audio();
-  deathSound.src = "audio/death.mp3";
+  deathSound.src = "audio/death.wav";
 
   var appleImg = new Image();
 
@@ -223,22 +211,18 @@ window.addEventListener("load", function() {
   window.addEventListener("keydown", function() {
     var key = event.keyCode;
     if (key == 37 && !(dir == "RIGHT") && !(mov == 1)) {
-      moveSoundLeft.play();
       dir = "LEFT";
       mov = 1;
     }
     if (key == 38 && !(dir == "DOWN") && !(mov == 1)) {
-      moveSoundUp.play();
       dir = "UP";
       mov = 1;
     }
     if (key == 39 && !(dir == "LEFT") && !(mov == 1)) {
-      moveSoundRight.play();
       dir = "RIGHT";
       mov = 1;
     }
     if (key == 40 && !(dir == "UP") && !(mov == 1)) {
-      moveSoundDown.play();
       dir = "DOWN";
       mov = 1;
     }
