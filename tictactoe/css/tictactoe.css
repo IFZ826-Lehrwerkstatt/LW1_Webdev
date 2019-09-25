@@ -3,7 +3,13 @@ body {
   background-image: url("../img/background2.gif");
   background-repeat: no-repeat;
   background-size: cover;
+}
 
+
+p {
+  color: white;
+  font-family: "Impact", sans-serif;
+  font-size: 30px;
 }
 
 h1{
@@ -39,7 +45,7 @@ a{
 }
 
 .message{
-  margin-top: 30px;
+  top: 400px;
   background-color:#00ba89;
   height:50px;
   color:#fff;
@@ -50,13 +56,17 @@ a{
 
 }
 
+.back {
+  bottom: auto;
+}
+
 .restart{
   width:240px;
   text-align:center;
   margin:0 auto;
   color: white;
   font-family:  "Impact", sans-serif;
-  font-size: 40px;
+  font-size: 35px;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
@@ -67,13 +77,13 @@ a{
 }
 
 td {
-	border:  10px solid white;
-	height:  250px;
-	width:  250px;
+	border:  10px solid #e8e8e8;
+	height:  160px;
+	width:  160px;
 	text-align:  center;
 	vertical-align:  middle;
 	font-family:  "Arial", sans-serif;
-	font-size:  130px;
+	font-size:  110px;
 	cursor: pointer;
 
 }
@@ -83,8 +93,8 @@ table {
 	position: absolute;
   align-items: center;
 	left: 50%;
-	margin-left: -385px;
-	top: 400px;
+	margin-left: -255px;
+	top: 460px;
 }
 
 table tr:first-child td {
