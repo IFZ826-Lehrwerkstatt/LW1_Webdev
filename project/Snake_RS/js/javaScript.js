@@ -76,15 +76,12 @@ window.addEventListener("load", function() {
       switch (speedSelect.value) {
         case "n":
           setInterval(draw, 125);
-          console.log(125);
           break;
         case "m":
           setInterval(draw, 100);
-          console.log(100);
           break;
         case "f":
           setInterval(draw, 75);
-          console.log(75);
           break;
       }
 
