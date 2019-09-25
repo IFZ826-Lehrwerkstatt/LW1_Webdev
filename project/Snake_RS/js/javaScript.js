@@ -8,7 +8,6 @@ window.addEventListener("load", function() {
   const speedSelect = document.getElementById("selectSpeed");
   const scoreboard = document.getElementById("score");
 
-
   //**Variabels**
   box = 0;
 
@@ -39,11 +38,10 @@ window.addEventListener("load", function() {
   var appleImg = new Image();
 
 
-
   //**setup**
 
   //draw start screen
-  c.fillStyle = "#000000";
+  c.fillStyle = "#292929";
   c.fillRect(0, 0, canvas.width, canvas.height);
   c.font = "50px Arial";
   c.fillStyle = "#ffffff";
@@ -191,13 +189,13 @@ window.addEventListener("load", function() {
 
     // Gameoverscreen
     if (gamestate == 2) {
-      c.fillStyle = "#000000";
-      c.fillRect(0, 0, canvas.width, canvas.height);
+      c.fillStyle = "#383838";
+      c.fillRect(190, 130, 530, 300);
       c.font = "50px Arial";
       c.fillStyle = "#ffffff";
-      c.fillText("looks like you lost", 230, 100);
-      c.fillText("Your score was: " + score, 220, 300);
-      c.fillText("Press F5 to play again", 190, 150);
+      c.fillText("looks like you lost", 255, 190);
+      c.fillText("Press F5 to play again", 205, 240);
+      c.fillText("Your score was: " + score, 250, 380);
     }
     // Gameoverscreen end
 
@@ -239,12 +237,11 @@ window.addEventListener("load", function() {
       x_grid = 0;
       for (var i_width = 0; i_width < canvas.width / box; i_width++) { // Draw 1 x line of boxes
         if (color_i % 2 == 0) { //if color_i is even
-          c.fillStyle = "#b8b8b8";
+          c.fillStyle = "#cfcfcf";
         } else { //if color_i is not even
-          c.fillStyle = "#dedede";
+          c.fillStyle = "#adadad";
         }
         c.fillRect(x_grid, y_grid, box, box);
-
         x_grid = x_grid + box;
         color_i++;
       }
