@@ -1,0 +1,18 @@
+#canvas {
+  border: 10px solid black;
+  margin: auto;
+  display: block;
+}
+
+div {
+  text-align: center;
+}
+
+label {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.retry_button {
+  font-size: 40px;
+}

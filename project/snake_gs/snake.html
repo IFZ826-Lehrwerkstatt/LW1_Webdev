@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="css/snake.css">
+  </head>
+  <body>
+    <div>
+      <h1>Snake Game</h1>
+      <h3>Press any key to start, after you've selected your settings.</h3>
+      <h3>Once the game screen loaded, you can move the snake with the arrow keys!</h3>
+    </div>
+
+    <div id="snake_game">
+      <label id="sizeSelectionText" for="sizeSelection">Select your Size: </label>
+      <select id="sizeSelection">
+        <option value="small">Small</option>
+        <option value="large">Large</option>
+      </select>
+
+      <label id="speedSelectionText" for="speedSelection">Select your speed</label>
+      <select id="speedSelection">
+        <option value="slow">Slow</option>
+        <option value="medium">Middle</option>
+        <option value="fast">Fast</option>
+        <option value="sonic">Sonic Speed</option>
+      </select>
+      <hr>
+
+      <canvas id="canvas"></canvas>
+      <p id="score">Your Score: </p>
+
+
+    </div>
+
+    <script type="text/ javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/snake.js"></script>
+  </body>
+</html>
