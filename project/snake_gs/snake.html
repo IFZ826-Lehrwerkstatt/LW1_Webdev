@@ -3,16 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Snake Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/snake.css">
   </head>
   <body>
-    <div>
+    <header class="jumbotron">
       <h1>Snake Game</h1>
       <h3>Press any key to start, after you've selected your settings.</h3>
       <h3>Once the game screen loaded, you can move the snake with the arrow keys!</h3>
-    </div>
+    </header>
 
-    <div id="snake_game">
+    <div id="snake_game_text">
       <label id="sizeSelectionText" for="sizeSelection">Select your Size: </label>
       <select id="sizeSelection">
         <option value="small">Small</option>
@@ -27,11 +28,11 @@
         <option value="sonic">Sonic Speed</option>
       </select>
       <hr>
+    </div>
 
+    <div id="snake_game">
       <canvas id="canvas"></canvas>
-      <p id="score">Your Score: </p>
-
-
+      <h3 id="score">Your Score: </h3>
     </div>
 
     <script type="text/ javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

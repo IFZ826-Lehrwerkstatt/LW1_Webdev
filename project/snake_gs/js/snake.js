@@ -6,13 +6,10 @@ window.addEventListener("load", function() {
 
 //audio
   var eatingFood = new Audio();
-  eatingFood.src = "audio/bite.mp3";
-
-  var backgroundMusic = new Audio();
-  backgroundMusic.src = "audio/aaronsmith.mp3";
+  eatingFood.src = "audio/bite.wav";
 
   var deathSound = new Audio();
-  deathSound.src = "audio/death.mp3";
+  deathSound.src = "audio/death.wav";
 
 //gameState
   var gameState = 0;
@@ -45,6 +42,7 @@ window.addEventListener("load", function() {
   var size = document.getElementById("sizeSelection");
   var speed = document.getElementById("speedSelection");
   var snake_div = document.getElementById("snake_game");
+  var snake_text = document.getElementById("snake_game_text");
   var labelSizeSelection = document.getElementById("sizeSelectionText");
   var labelSpeedSelection = document.getElementById("speedSelectionText");
   var paragScore = document.getElementById("score");
@@ -98,11 +96,13 @@ window.addEventListener("keydown", function() {
 
      //draw snake
      for (var i = 0; i < snake.length; i++) {
-      if (i % 2 == 0) {
-         c.fillStyle = "#FFB275";
-       }
-       else {
-         c.fillStyle = "#E8906B";
+      if (i % 2 == 0)
+      {
+        c.fillStyle = "#7E86D9";
+      }
+      else
+      {
+        c.fillStyle = "#805FD9";
        }
        c.fillRect(snake[i].x, snake[i].y, box, box);
      }
@@ -143,8 +143,6 @@ window.addEventListener("keydown", function() {
      if (gridCollisionDetection(newHead) || snakeBodyCollisionDetection(newHead, snake)) {
         gameState = 2;
      }
-/*     snakeBodyCollisionDetection(newHead, snake);
-     gridCollisionDetection(newHead);*/
 
      //adds new head to array
      snake.unshift(newHead);
@@ -172,16 +170,16 @@ window.addEventListener("keydown", function() {
    }
 
    if (gameState == 3) {
-     snake_div.removeChild(canvas);
-     snake_div.removeChild(size);
-     snake_div.removeChild(speed);
-     snake_div.removeChild(labelSizeSelection);
-     snake_div.removeChild(labelSpeedSelection);
+//     snake_div.removeChild(canvas);
+     snake_text.removeChild(size);
+     snake_text.removeChild(speed);
+     snake_text.removeChild(labelSizeSelection);
+     snake_text.removeChild(labelSpeedSelection);
      gameState = 4;
    }
 
    if (gameState == 4) {
-     var p = document.createElement("p");
+     var p = document.createElement("h3");
      p.innerHTML = "Game Over, wanna play again?";
      var b = document.createElement("button");
      b.innerText = "Retry!";
@@ -208,6 +206,7 @@ window.addEventListener("keydown", function() {
 
 // drawBackground
 /* Draws the grid of the snake game */
+
   function drawBackground() {
     var xGrid = 0;
     var yGrid = 0;
@@ -216,9 +215,9 @@ window.addEventListener("keydown", function() {
     for (var gridHeight = 0; gridHeight < canvas.height / box; gridHeight++) { //Draws 1 Line for each box height
       for (var gridWidth = 0; gridWidth < canvas.width / box; gridWidth++) { // Draws 1 Line of Boxes
         if (gridColor % 2 == 0) { //If gridColor is even
-          c.fillStyle = "#b8b8b8";
+          c.fillStyle = "#CFCFCF";
         } else { // If gridColor isn't even
-          c.fillStyle = "#dedede";
+          c.fillStyle = "#C4C4C4";
         }
         c.fillRect(xGrid, yGrid, box, box); //Draw box
         xGrid = xGrid + box;
@@ -269,7 +268,6 @@ function snakeMovement() {
 //snakeMovement end
 
 // setRandomX/Ypos
-/* Sets a Random x/y Position */
 
 function setRandomXpos(randomX) {
   var randomX = parseInt(Math.random() * canvas.width / box) * box;

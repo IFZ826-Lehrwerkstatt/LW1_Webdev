@@ -4,7 +4,13 @@
   display: block;
 }
 
-div {
+div header{
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+}
+
+#snake_game, #snake_game_text, .jumbotron {
   text-align: center;
 }
 
