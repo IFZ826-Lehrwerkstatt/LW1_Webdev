@@ -23,6 +23,7 @@ var TicTacToe =
             return false;
         }
 
+        //Player Switching
         if ( TicTacToe.counter % 2 === 0)
         {
             $(cell).html(player1).addClass('player1 selected');
@@ -37,6 +38,7 @@ var TicTacToe =
 
     validateTicTacToe: function()
     {
+      // Playfields
         var cell0 = $('#0'),
             cell1 = $('#1'),
             cell2 = $('#2'),
@@ -47,6 +49,7 @@ var TicTacToe =
             cell7 = $('#7'),
             cell8 = $('#8');
 
+            // All Possible Winning Combos
              if (   $(cell0).text() === 'X'
                 &&  $(cell1).text() === 'X'
                 &&  $(cell2).text() === 'X' ||
